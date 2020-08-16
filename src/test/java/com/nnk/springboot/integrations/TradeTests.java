@@ -1,4 +1,4 @@
-package com.nnk.springboot;
+package com.nnk.springboot.integrations;
 
 import com.nnk.springboot.domain.Trade;
 import com.nnk.springboot.manager.trade.TradeManager;
@@ -40,6 +40,6 @@ public class TradeTests {
 		Integer id = trade.getId();
 		tradeManager.delete(id);
 		Trade tradeList = tradeManager.find(id);
-		Assert.assertNotNull(tradeList);
+		Assert.assertNull(tradeList);
 	}
 }

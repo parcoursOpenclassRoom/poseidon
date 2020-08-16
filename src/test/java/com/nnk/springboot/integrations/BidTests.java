@@ -1,4 +1,4 @@
-package com.nnk.springboot;
+package com.nnk.springboot.integrations;
 
 import com.nnk.springboot.domain.BidList;
 import com.nnk.springboot.manager.bid.BidManager;
@@ -40,6 +40,6 @@ public class BidTests {
 		Integer id = bid.getId();
 		bidManager.delete(id);
 		BidList bidList = bidManager.find(id);
-		Assert.assertNotNull(bidList);
+		Assert.assertNull(bidList);
 	}
 }

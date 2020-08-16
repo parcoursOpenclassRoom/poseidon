@@ -1,4 +1,4 @@
-package com.nnk.springboot;
+package com.nnk.springboot.integrations;
 
 import com.nnk.springboot.domain.Rating;
 import com.nnk.springboot.manager.rating.RatingManager;
@@ -40,6 +40,6 @@ public class RatingTests {
 		Integer id = rating.getId();
 		ratingManager.delete(id);
 		Rating ratingList = ratingManager.find(id);
-		Assert.assertNotNull(ratingList);
+		Assert.assertNull(ratingList);
 	}
 }

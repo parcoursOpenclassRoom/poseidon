@@ -1,4 +1,4 @@
-package com.nnk.springboot;
+package com.nnk.springboot.integrations;
 
 import com.nnk.springboot.domain.RuleName;
 import com.nnk.springboot.manager.ruleName.RuleNameManager;
@@ -40,6 +40,6 @@ public class RuleTests {
 		Integer id = rule.getId();
 		ruleNameManager.delete(id);
 		RuleName ruleList = ruleNameManager.find(id);
-		Assert.assertNotNull(ruleList);
+		Assert.assertNull(ruleList);
 	}
 }
